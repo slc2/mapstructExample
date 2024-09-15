@@ -13,6 +13,8 @@ public class UserMappingTest {
                 Mappers.getMapper(UserUserCommandMapper.class);
         UserCommand myCommand = mapper.userToCommand(myUser);
 
+        assert(myCommand.getFirstName().equals(myUser.getFirstName()));
+        assert(myCommand.getLastName().equals(myUser.getLastName()));
         assert(myCommand.getEmail().equals(myUser.getEmail()));
     }
 }
